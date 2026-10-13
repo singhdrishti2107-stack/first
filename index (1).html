@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducing ChatGPT</title>
+
+  <!-- Link to our CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== 1. NAVBAR ========== -->
+  <header class="navbar">
+    <div class="logo">OpenAI</div>
+
+    <nav class="nav-links">
+      <a href="#">Research</a>
+      <a href="#">Products</a>
+      <a href="#">Business</a>
+      <a href="#">Developers</a>
+      <a href="#">Company</a>
+      <a href="#">Foundation</a>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="#" class="login">Log in</a>
+      <a href="#chat" class="btn-light">Try ChatGPT</a>
+    </div>
+  </header>
+
+  <!-- ========== 2. HERO SECTION ========== -->
+  <section class="hero">
+    <p class="date">13 October , 2026 <span>Product</span></p>
+    <h1>Introducing ChatGPT</h1>
+
+    <div class="hero-buttons">
+      <a href="#chat" class="btn-light">Try ChatGPT</a>
+      <a href="#chat" class="btn-link">Try ChatGPT for Work &gt;</a>
+    </div>
+
+    <div class="notice">
+      <p>This post introduced ChatGPT in 2022. ChatGPT has evolved substantially since then.</p>
+      <hr>
+      <p class="small">Looking for more about ChatGPT:</p>
+      <a href="#" class="release">Release notes</a>
+    </div>
+  </section>
+
+  <!-- ========== 3. CHAT SECTION ========== -->
+  <section class="chat-section" id="chat">
+    <h2>Try ChatGPT</h2>
+
+    <div class="chat-box">
+
+      <!-- API key input -->
+      <div class="api-row">
+        <label for="apiKey">API Key</label>
+        <input type="password" id="apiKey" placeholder="Paste your OpenAI API key (sk-...)">
+      </div>
+
+      <!-- Messages appear here -->
+      <div class="messages" id="messages">
+        <div class="message bot">Hello! Enter your API key above, then ask me anything.</div>
+      </div>
+
+      <!-- Question input + send button -->
+      <div class="input-row">
+        <input type="text" id="userInput" placeholder="Type your message here...">
+        <button id="sendBtn">Send</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== 4. FOOTER ========== -->
+  <footer class="footer">
+    <p>Made for a college project. Not affiliated with OpenAI.</p>
+  </footer>
+
+  <!-- Link to our JavaScript file (at the end so the HTML loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>

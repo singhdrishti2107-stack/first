@@ -1,0 +1,301 @@
+/* ========== 1. RESET & BASIC STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* padding and border stay inside the width */
+}
+
+html {
+  scroll-behavior: smooth;  /* smooth scroll when clicking "Try ChatGPT" */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1c1b1d;   /* dark background like the screenshot */
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ========== 2. NAVBAR ========== */
+.navbar {
+  display: flex;                    /* puts logo, links, buttons in one row */
+  justify-content: space-between;   /* spreads them across the bar */
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: #d0d0d5;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  font-size: 15px;
+}
+
+
+/* ========== 3. BUTTONS ========== */
+.btn-light {
+  background-color: #dfe3f5;   /* light bluish-grey pill button */
+  color: #1c1b1d;
+  padding: 10px 22px;
+  border-radius: 30px;         /* makes the pill shape */
+  font-size: 15px;
+}
+
+.btn-light:hover {
+  background-color: #ffffff;
+}
+
+.btn-link {
+  font-size: 15px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ========== 4. HERO SECTION ========== */
+.hero {
+  text-align: center;
+  padding: 70px 20px 50px;
+}
+
+.date {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.date span {
+  color: #8d8d95;
+  margin-left: 12px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+/* Grey notice box */
+.notice {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #34313a;
+  padding: 28px 32px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.notice hr {
+  border: none;
+  border-top: 1px solid #4b4852;
+  margin: 18px 0;
+}
+
+.notice .small {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.release {
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+
+/* ========== 5. CHAT SECTION ========== */
+.chat-section {
+  padding: 50px 20px 70px;
+  text-align: center;
+}
+
+.chat-section h2 {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.chat-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #2a2830;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* API key row */
+.api-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.api-row label {
+  font-size: 14px;
+  color: #b8b8c0;
+}
+
+.api-row input {
+  flex: 1;   /* takes all the remaining space */
+}
+
+/* Both text inputs share the same look */
+input {
+  padding: 12px 14px;
+  border: 1px solid #4b4852;
+  border-radius: 8px;
+  background-color: #1c1b1d;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #dfe3f5;   /* highlight when clicked */
+}
+
+/* Messages area */
+.messages {
+  height: 350px;
+  overflow-y: auto;           /* scrollbar appears when messages are many */
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #1c1b1d;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  white-space: pre-wrap;      /* keeps line breaks from the AI reply */
+  word-wrap: break-word;
+}
+
+/* User message: right side, light colour */
+.message.user {
+  align-self: flex-end;
+  background-color: #dfe3f5;
+  color: #1c1b1d;
+}
+
+/* ChatGPT message: left side, dark grey */
+.message.bot {
+  align-self: flex-start;
+  background-color: #3c3944;
+}
+
+/* Error message: red-tinted */
+.message.error {
+  align-self: flex-start;
+  background-color: #5a2a2a;
+}
+
+/* Input + send button row */
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-row input {
+  flex: 1;
+}
+
+button {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  background-color: #dfe3f5;
+  color: #1c1b1d;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* ========== 6. FOOTER ========== */
+.footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+  color: #8d8d95;
+  border-top: 1px solid #34313a;
+}
+
+
+/* ========== 7. RESPONSIVE (mobile screens) ========== */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;            /* hide menu links on small screens */
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .api-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .message {
+    max-width: 92%;
+  }
+}
